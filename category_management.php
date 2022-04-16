@@ -10,7 +10,7 @@ function add_category() {
 		}
 	}
 	$id++;
-	$array = array_merge(array('id' => $id), array('categories' => $_POST['categories']), array('name' => $_POST['name']));
+	$array = array_merge(array('id' => $id), array('name' => $_POST['name']));
 	$db[] = $array;
 	file_put_contents('categories.db', serialize($db));
 }
@@ -18,19 +18,20 @@ function remove_category($id) {
 	if (file_exists('categories.db')) {
 		$db = unserialize(file_get_contents('categories.db'));
 		foreach ($db as &$category) {
+			if ($category['id'] == $id) {
+				continue;
+			}
 			$array[] = $category;
-
 		}
 	}
 	file_put_contents('categories.db', serialize($array));
 }
+
 function modify_category($id) {
 	if (file_exists('categories.db')) {
 		$db = unserialize(file_get_contents('categories.db'));
 		foreach ($db as &$category) {
 			if ($category['id'] == $id) {
-				if (isset($_POST['categories']))
-					$category['categories'] = $_POST['categories'];
 				if (isset($_POST['name']))
 					$category['name'] = $_POST['name'];
 			}
@@ -43,6 +44,7 @@ if ($_SESSION['admin'] == false) {
 	header('HTTP/1.0 401 Unauthorized');
 	return;
 }
+
 if ($_POST['action'] == 'remove') {
 	if (!isset($_POST['id'])) {
 		echo "Missing category id" . PHP_EOL;
@@ -50,6 +52,7 @@ if ($_POST['action'] == 'remove') {
 	}
 	remove_category($_POST['id']);
 }
+
 if ($_POST['action'] == 'add') {
 	if (!isset($_POST['name'])) {
 		echo "Missing information" . PHP_EOL;
