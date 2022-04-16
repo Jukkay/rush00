@@ -357,7 +357,7 @@ h3.info-text {
 .banner-text { 
     flex-direction: column;
     justify-content: center;
-    padding-left: 3rem;
+
 	color: #4d4d4d;
 	margin: 1em;
 
@@ -391,6 +391,11 @@ form {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
+	background-color: rgba(252, 230, 254, 0.786);
+	margin: 2rem;
+	padding: 2rem;
+	border-radius: 2em;
+	box-shadow: 0 0.5rem 1rem rgba(80, 80, 80, 0.421);
 }
 
 #flex_forms {
@@ -409,9 +414,15 @@ form {
 
 input {
 	height: 1.5em;
+	border-radius: 1em;
+	border: initial;
+	box-shadow: 0 0.2rem 0.5rem rgba(175, 175, 175, 0.421);
 }
 
 input[type="checkbox" i] {
+	border-radius: 1em;
+	border: initial;
+	box-shadow: 0 0.2rem 0.5rem rgba(175, 175, 175, 0.421);
     background-color: initial;
     cursor: default;
     appearance: auto;
