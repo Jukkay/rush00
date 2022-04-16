@@ -1,6 +1,6 @@
 <?php
 session_start();
-function add_product($array) {
+function add_product() {
 	$id = 0;
 	if (file_exists('products.db')) {
 		$db = unserialize(file_get_contents('products.db'));
@@ -10,7 +10,7 @@ function add_product($array) {
 		}
 	}
 	$id++;
-	$array = array('id' => $id) + $array;
+	$array = array_merge(array('id' => $id), array('categories' => $_POST['categories']), array('name' => $_POST['name']), array('description' => $_POST['description']), array('price' => $_POST['price']), array('picture' => $_POST['picture']));
 	$db[] = $array;
 	file_put_contents('products.db', serialize($db));
 }
@@ -67,7 +67,7 @@ if ($_POST['action'] == 'add') {
 		echo "Missing information" . PHP_EOL;
 		return;
 	}
-	add_product(array($_POST['categories'], $_POST['name'], $_POST['description'], $_POST['price'], $_POST['picture']));
+	add_product();
 }
 if ($_POST['action'] == 'modify') {
 	if (!isset($_POST['id'])) {
