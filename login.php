@@ -9,10 +9,10 @@ if (!auth($_POST["login"], $_POST["passwd"])) {
 }
 else {
 $_SESSION["loggued_on_user"] = $_POST["login"];
-$array = unserialize(file_get_contents('private/passwd'));
+$array = unserialize(file_get_contents('./private/passwd'));
 foreach ($array as $user) {
 	if ($user['login'] == $_SESSION["loggued_on_user"])
-		$user['admin'] = $_SESSION['admin'];
+		$_SESSION['admin'] = $user['admin'];
 }
 echo '
 <html>
