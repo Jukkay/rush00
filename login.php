@@ -9,14 +9,17 @@ if (!auth($_POST["login"], $_POST["passwd"])) {
 }
 else {
 $_SESSION["loggued_on_user"] = $_POST["login"];
+$array = unserialize(file_get_contents('private/passwd'));
+foreach ($array as $user) {
+	if ($user['login'] == $_SESSION["loggued_on_user"])
+		$user['admin'] = $_SESSION['admin'];
+}
 echo '
 <html>
 <head>
 	<title>Document</title>
 </head>
 <body>
-<iframe src="chat.php" height="550px" width="100%" frameborder="0"></iframe>
-<iframe src="speak.php" height="50px" width="100%" frameborder="0"></iframe>
 </body>
 </html>';
 }

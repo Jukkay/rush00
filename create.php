@@ -16,13 +16,17 @@ if (file_exists($filename)) {
 		}
 	}
 }
-if (isset($_POST['admin']) && $_SESSION['admin'] != true && $_POST['admin'] == true)
+if (!isset($_POST['admin']))
+	$_POST['admin'] == false;
+if ($_POST['admin'] == true && $_SESSION['admin'] != true)
 	$_POST['admin'] == false;
 $array[] = array('login' => $_POST['login'],
 				 'passwd' => hash("whirlpool", $_POST['passwd']),
 				 'admin' => $_POST['admin']);
 file_put_contents($filename, serialize($array));
 echo "OK\n";
+if ($_SESSION['admin'] == true)
+	return;
 include('logout.php');
 header("Location: index.html");
 ?>
