@@ -15,7 +15,7 @@
 				<img id="logoimg" src="https://img.icons8.com/external-icongeek26-outline-gradient-icongeek26/452/external-sandwich-baking-and-bakery-icongeek26-outline-gradient-icongeek26.png" alt="School logo">
 			</div>
 			<div class="logo">
-				<h1>Hive<span  href="./basket.html" id="light">Paint Factory</span></h1>
+				<h1>Hive<span id="light"><a href="../index.php">Paint Factory</span></h1>
 			</div>
 			<div class="drop">
 				<a class="navspan" href="./basket.html">Basket</a>
@@ -34,6 +34,8 @@
 
 	
 	<!-- First section (forms) -->
+
+	<h3>Prouct management</h3>
 	<div class="first-section flex-container" id="flex_forms">
 		<div class="forms">
 			<div class="banner-text flex-container">
@@ -102,34 +104,41 @@
 
 	<!-- First section (banner) -->
 
-	<div class="first-section flex-container" id="light">
-		<div class="banner-text flex-container">
-			<h4>Order management</h4>
-			<a href="./addorder.html"><p>Add order</p></a>
-			<a href="./modifyorder.html"><p>Modify order</p></a>
-			<a href="./deleteorder.html"><p>Delete order</p></a>
+	<h3>Category management</h3>
+	<div class="first-section flex-container" id="flex_forms">
+		<div class="forms">
+			<div class="banner-text flex-container">
+				<h3>Add category</h3>
+				<form action="../category_management.php" method="post">
+					<label class="form-label">Category name:* </label>
+					<input type="text" class="form-control" name="name" required>
+					<br>
+					<input type="submit" name="action" value="add">
+				</form>
+			</div>
+			<div class="banner-text flex-container">
+				<h3>Modify category</h3>
+				<form action="../product_management.php" method="post">
+					<label for="item">Enter category id:* </label>
+					<input type="text" class="form-control" name="id" required>
+					<label class="form-label">New category name: </label>
+					<input type="text" class="form-control" name="name">
+					<br>
+					<input type="submit" name="action" value="modify">
+				</form>
+			</div>
+			<div class="banner-text flex-container">
+				<h3>Delete category</h3>
+				<form action="../product_management.php" method="post">
+					<label for="item">Enter item id:* </label>
+					<input type="text" class="form-control" name="id" required>
+					<br><br>
+					<input type="submit" class="delete" name="action" value="remove">
+				</form>
+			</div>
 		</div>
 	</div>
-
-	<div class="first-section flex-container">
-		<div class="banner-text flex-container">
-			<h4>Users</h4>
-			<a href="./additem.html"><p>Add user</p></a>
-			<a href="./modifyitem.html"><p>Modify user</p></a>
-			<a href="./deleteitem.html"><p>Delete user</p></a>
-		</div>
-	</div>
-
-	<div class="first-section flex-container" id="light">
-		<div class="banner-text flex-container">
-			<h4>Admin section</h4>
-			<a href="./addadmin.html"><p>Add admin privileges</p></a>
-			<a href="./modifyitem.html"><p>Modify admin list</p></a>
-			<a href="./deleteitem.html"><p>Delete admin</p></a>
-		</div>
-	</div>
-
-
+</div>
 	</main>
 </body>
 

@@ -20,13 +20,13 @@ echo '
 				<h1>Hive<span id="light">Paint Factory</span></h1>
 			</div>
 			<div class="drop">
-				<a class="navspan" href="./basket.html">Basket</a>
+				<a class="navspan" href="./templates/basket.html">Basket</a>
 			</div>
 			<div class="drop">
-				<a class="navspan" href="./login.html">Login</a>
+				<a class="navspan" href="./templates/login.html">Login</a>
 			</div>
 			<div class="drop">
-				<a class="navspan" href="./create.html">Sign up</a>
+				<a class="navspan" href="./templates/create.html">Sign up</a>
 			</div>
 		</div>
 	</header>
