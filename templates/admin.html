@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Web-Shop</title>
+	<title>Hive Paint Factory</title>
 	<link href="../static/style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -15,82 +15,16 @@
 				<img id="logoimg" src="https://img.icons8.com/external-icongeek26-outline-gradient-icongeek26/452/external-sandwich-baking-and-bakery-icongeek26-outline-gradient-icongeek26.png" alt="School logo">
 			</div>
 			<div class="logo">
-				<h1>Web<span id="light">Shop</span></h1>
+				<h1>Hive<span  href="./basket.html" id="light">Paint Factory</span></h1>
 			</div>
-			<div class="nav-desktop">
-				<div class="drop">
-					<a class="navspan dropdown">New Products</a>
-					<div class="dropdown-content">
-						<a href="#">Name</a>
-						<a href="#">Name</a>
-						<a href="#">Name</a>
-						<a href="#">Name</a>
-						<div class="drop-secondary">
-							<a class="dropdown-secondary" href="#">Name</a>
-							<div class="dropdown-secondary-content">
-								<a href="#">Name</a>
-								<a href="#">Name</a>
-								<a href="#">Name</a>
-								<a href="#">Name</a>
-								<div class="drop-third">
-									<a class="dropdown-third" href="#">Name</a>
-									<div class="dropdown-third-content">
-										<a href="#">Name</a>
-										<a href="#">Name</a>
-										<a href="#">Name</a>
-										<a href="#">Name</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="drop">
-					<a class="navspan dropdown">Name</a>
-					<div class="dropdown-content">
-						<a href="#">Name</a>
-						<a href="#">Name</a>
-						<a href="#">Name</a>
-						<a href="#">Name</a>
-						<div class="drop-secondary">
-							<a class="dropdown-secondary" href="#">Name</a>
-							<div class="dropdown-secondary-content">
-								<a href="#">Name</a>
-								<a href="#">Name</a>
-								<a href="#">Name</a>
-								<a href="#">Name</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="drop">
-					<a class="navspan dropdown">Categoties</a>
-					<div class="dropdown-content">
-						<a href="#">Name</a>
-						<a href="#">Name</a>
-						<a href="#">Name</a>
-						<a href="#">Name</a>
-					</div>
-				</div>
-				<div class="drop">
-					<a class="navspan dropdown">Name it</a>
-					<div class="dropdown-content">
-						<a href="#">Name</a>
-						<a href="#">Name</a>
-						<a href="#">Name</a>
-						<a href="#">Name</a>
-					</div>
-				</div>
-				<div class="drop">
-					<a class="navspan dropdown">Basket</a>
-					<div class="dropdown-content">
-						<a href="#">Name</a>
-						<a href="#">Manage</a>
-						<a href="#">Bill</a>
-						<a href="#">MobilePay</a>
-					</div>
-				</div>
-				</div>
+			<div class="drop">
+				<a class="navspan" href="./basket.html">Basket</a>
+			</div>
+			<div class="drop">
+				<a class="navspan" href="./login.html">Login</a>
+			</div>
+			<div class="drop">
+				<a class="navspan" href="./create.html">Sign up</a>
 			</div>
 		</div>
 	</header>
@@ -98,7 +32,7 @@
 	<main>
 
 
-
+	
 	<!-- First section (forms) -->
 	<div class="first-section flex-container" id="flex_forms">
 		<div class="forms">
@@ -127,13 +61,13 @@
 					<label class="form-label">Item name:* </label>
 					<input type="text" class="form-control" name="name" required>
 					<label class="form-label">Description:* </label>
-					<input type="text" name="description" required>
+					<input type="text" name="description" required> 
 					<label class="form-label">Price:* </label>
-					<input type="text" name="price" required>
+					<input type="text" name="price" required> 
 					<label class="form-label">Image location:* </label>
-					<input type="text" name="picture" required>
+					<input type="text" name="picture_path" required> 
 					<br>
-					<input type="submit" name="action" value="add">
+					<input type="submit" value="Submit">
 				</form>
 			</div>
 			<div class="banner-text flex-container">
@@ -144,13 +78,13 @@
 					<label class="form-label">New item name: </label>
 					<input type="text" class="form-control" name="name">
 					<label class="form-label">New description: </label>
-					<input type="text" name="description">
+					<input type="text" name="description"> 
 					<label class="form-label">New price: </label>
-					<input type="text" name="price">
+					<input type="text" name="price"> 
 					<label class="form-label">New image location: </label>
-					<input type="text" name="picture">
+					<input type="text" name="picture_path" required> 
 					<br>
-					<input type="submit" name="action" value="modify">
+					<input type="submit" value="Submit">
 				</form>
 			</div>
 			<div class="banner-text flex-container">
@@ -159,7 +93,7 @@
 					<label for="item">Enter item id:* </label>
 					<input type="text" class="form-control" name="id" required>
 					<br><br>
-					<input type="submit" class="delete" name="action" value="remove">
+					<input type="submit" class="delete" value="Delete">
 				</form>
 			</div>
 		</div>
