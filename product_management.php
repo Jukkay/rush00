@@ -19,12 +19,14 @@ function remove_product($id) {
 		$db = unserialize(file_get_contents('products.db'));
 		foreach ($db as &$product) {
 			if ($product['id'] == $id) {
-				unlink($product['picture']);
-				unset($product);
+				echo $product['picture'];
+				unlink("." . $product['picture']);
+				continue;
 			}
+			$array[] = $product;
 		}
 	}
-	file_put_contents('products.db', serialize($db));
+	file_put_contents('products.db', serialize($array));
 }
 function modify_product($id) {
 	if (file_exists('products.db')) {
@@ -75,3 +77,4 @@ if ($_POST['action'] == 'modify') {
 	}
 	modify_product($_POST['id']);
 }
+header("Location: ./templates/admin.html");

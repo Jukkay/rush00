@@ -98,7 +98,7 @@
 	<main>
 
 
-	
+
 	<!-- First section (forms) -->
 	<div class="first-section flex-container" id="flex_forms">
 		<div class="forms">
@@ -127,13 +127,13 @@
 					<label class="form-label">Item name:* </label>
 					<input type="text" class="form-control" name="name" required>
 					<label class="form-label">Description:* </label>
-					<input type="text" name="description" required> 
+					<input type="text" name="description" required>
 					<label class="form-label">Price:* </label>
-					<input type="text" name="price" required> 
+					<input type="text" name="price" required>
 					<label class="form-label">Image location:* </label>
-					<input type="text" name="picture_path" required> 
+					<input type="text" name="picture" required>
 					<br>
-					<input type="submit" value="Submit">
+					<input type="submit" name="action" value="add">
 				</form>
 			</div>
 			<div class="banner-text flex-container">
@@ -144,13 +144,13 @@
 					<label class="form-label">New item name: </label>
 					<input type="text" class="form-control" name="name">
 					<label class="form-label">New description: </label>
-					<input type="text" name="description"> 
+					<input type="text" name="description">
 					<label class="form-label">New price: </label>
-					<input type="text" name="price"> 
+					<input type="text" name="price">
 					<label class="form-label">New image location: </label>
-					<input type="text" name="picture_path" required> 
+					<input type="text" name="picture" required>
 					<br>
-					<input type="submit" value="Submit">
+					<input type="submit" name="action" value="modify">
 				</form>
 			</div>
 			<div class="banner-text flex-container">
@@ -159,7 +159,7 @@
 					<label for="item">Enter item id:* </label>
 					<input type="text" class="form-control" name="id" required>
 					<br><br>
-					<input type="submit" class="delete" value="Delete">
+					<input type="submit" class="delete" name="action" value="remove">
 				</form>
 			</div>
 		</div>
