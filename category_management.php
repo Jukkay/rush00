@@ -10,7 +10,7 @@ function add_category() {
 		}
 	}
 	$id++;
-	$array = array_merge(array('id' => $id), array('name' => $_POST['name']));
+	$array = array_merge(array('id' => $id), array('name' => $_POST['name']), array('description' => $_POST['description']), array('picture' => $_POST['picture']));
 	$db[] = $array;
 	file_put_contents('categories.db', serialize($db));
 }
@@ -34,6 +34,10 @@ function modify_category($id) {
 			if ($category['id'] == $id) {
 				if (isset($_POST['name']))
 					$category['name'] = $_POST['name'];
+				if (isset($_POST['description']))
+					$category['description'] = $_POST['description'];
+				if (isset($_POST['picture']))
+					$category['picture'] = $_POST['picture'];
 			}
 		}
 	}

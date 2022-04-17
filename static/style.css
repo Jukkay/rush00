@@ -69,7 +69,7 @@ a:hover {
 .drop:hover .dropdown-content {
 	display: block;
 }
-	
+
 .drop:hover .dropdown {
 	background-color: rgb(192 137 198 / 19%);
 }
@@ -116,7 +116,7 @@ a:hover {
 .drop-secondary:hover .dropdown-secondary-content {
 	display: block;
 }
-	
+
 .drop-secondary:hover .dropdown-secondary {
 	background-color: rgb(192 137 198 / 19%);
 }
@@ -163,7 +163,7 @@ a:hover {
 .drop-third:hover .dropdown-third-content {
 	display: block;
 }
-	
+
 .drop-third:hover .dropdown-third {
 	background-color: rgb(192 137 198 / 19%);
 }
@@ -225,13 +225,13 @@ main {
 
 /*second section*/
 
-.second-section {    
-    justify-content: flex-start;  
+.second-section {
+    justify-content: flex-start;
     flex-wrap: nowrap;
-	
+
 }
 
-.left {   
+.left {
     padding: 2rem 1.5rem;
     flex-direction: column;
     width: 60%;
@@ -250,14 +250,14 @@ main {
     padding-top: 1rem;
 }
 
- .info-blocks {  
+ .info-blocks {
 	border-bottom: 0.5px solid #e6e6e6;
 	padding: 1.5rem 1rem 1rem 1rem;
 }
 
  .container-img {
     max-width: 100%;
-    padding-left: 1rem; 
+    padding-left: 1rem;
 }
 
 .containerimg img {
@@ -308,7 +308,7 @@ main {
  .categories h2{
 	font-weight: bold;
 	/* -webkit-text-stroke: 1px rgba(255, 136, 120, 0.413);; */
- } 
+ }
 .container-text h4{
 	margin: 0;
 }
@@ -337,7 +337,7 @@ h3.info-text {
 
 /*first section*/
 
-.first-section { 
+.first-section {
     background-color: #e6e6e6
 }
 
@@ -354,7 +354,7 @@ h3.info-text {
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
 }
 
-.banner-text { 
+.banner-text {
     flex-direction: column;
     justify-content: center;
 
@@ -435,4 +435,13 @@ input[type="checkbox" i] {
 
 label {
 	padding: 5px 0;
+}
+
+.product-list {
+	display: flex;
+
+}
+.product-container {
+	display: flex;
+	flex-direction: column;
 }

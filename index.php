@@ -32,8 +32,14 @@ echo '
 	</header>
 
 	<main>
+	<div class="wrapper">
 ';
 include('product_list.php');
+include('category_list.php');
+echo '
+	</div>
+</body>
+</html>';
 // echo '
 // 	<main>
 

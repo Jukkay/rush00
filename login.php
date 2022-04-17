@@ -14,13 +14,6 @@ foreach ($array as $user) {
 	if ($user['login'] == $_SESSION["loggued_on_user"])
 		$_SESSION['admin'] = $user['admin'];
 }
-echo '
-<html>
-<head>
-	<title>Document</title>
-</head>
-<body>
-</body>
-</html>';
+header("Location: index.php");
 }
 
